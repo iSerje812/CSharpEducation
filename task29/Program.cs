@@ -11,25 +11,25 @@ int arrayLength = Convert.ToInt32(Console.ReadLine());
 int min = Convert.ToInt32(Console.ReadLine());
 int max = Convert.ToInt32(Console.ReadLine());
 
-int[] GetRandomArray(int arrayLength)
+int[] GetRandomArray(int length, int a, int b)
 
 {
-    int[] array = new int[arrayLength];
+    int[] array = new int[length];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max);
+        array[i] = new Random().Next(a, b);
     }
     return array;
 }
 
-int[] userArray = GetRandomArray(arrayLength);
+int[] userArray = GetRandomArray(arrayLength, min, max);
 
 void PrintArray(int[] arrayToPrint)
 {
     Console.Write("[");
     for (int i = 0; i < arrayToPrint.Length; i++)
     {
-        System.Console.Write($"{arrayToPrint[i]} ");
+        Console.Write($"{arrayToPrint[i]} ");
     }
     Console.Write("]");
 }
