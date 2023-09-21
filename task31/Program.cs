@@ -38,13 +38,13 @@ int GetSumP(int[] array)
         {
             sumP = sumP + array[i];
         }
-        else
+       /* else
         {
             sumN = sumN + array[i];
-        }
+        }*/
     }
     return sumP;
-    return sumN;
+    //return sumN;
 }
 
 Console.WriteLine("Введите длину и границы чисел массива: ");
@@ -54,4 +54,12 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 //int[] userArray = GetRandomArray(arrayLength, min, max);
 //PrintArray(userArray)
-PrintArray(GetRandomArray(arrayLength, min, max));
+//PrintArray(GetRandomArray(arrayLength, min, max));
+
+int[] userArray = GetRandomArray(arrayLength, min, max);
+PrintArray(userArray);
+//GetSumP(userArray);
+Console.WriteLine(" ");
+Console.WriteLine($"Сумма положительных чисел равна: {GetSumP(userArray)} ");
+//($"Сумма положительных чисел равна:{sumP}");
+//Console.WriteLine//($"Сумма положительных чисел равна:{sumN}");
